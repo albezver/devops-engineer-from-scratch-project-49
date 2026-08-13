@@ -1,4 +1,4 @@
-import random
+import secrets
 
 DESCRIPTION = "What is the result of the expression?"
 
@@ -16,9 +16,9 @@ def calculate(first_number, second_number, operation):
 
 
 def generate_round():
-    first_number = random.randint(1, 100)
-    second_number = random.randint(1, 100)
-    operation = random.choice(OPERATIONS)
+    first_number = secrets.randbelow(100) + 1
+    second_number = secrets.randbelow(100) + 1
+    operation = secrets.choice(OPERATIONS)
 
     question = f"{first_number} {operation} {second_number}"
     correct_answer = calculate(

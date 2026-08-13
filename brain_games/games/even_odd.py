@@ -1,10 +1,10 @@
-import random
+import secrets
 
 DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def generate_question():
-    return random.randint(1, 100)
+    return secrets.randbelow(100) + 1
 
 
 def is_even(number):

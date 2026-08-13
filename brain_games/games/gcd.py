@@ -1,5 +1,4 @@
-import random
-
+import secrets
 
 DESCRIPTION = "Find the greatest common divisor of given numbers."
 
@@ -15,8 +14,8 @@ def find_gcd(first_number, second_number):
 
 
 def generate_round():
-    first_number = random.randint(1, 100)
-    second_number = random.randint(1, 100)
+    first_number = secrets.randbelow(100) + 1
+    second_number = secrets.randbelow(100) + 1
 
     question = f"{first_number} {second_number}"
     correct_answer = find_gcd(first_number, second_number)
