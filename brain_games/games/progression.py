@@ -1,6 +1,5 @@
 import secrets
 
-
 DESCRIPTION = "What number is missing in the progression?"
 
 PROGRESSION_LENGTH = 10
